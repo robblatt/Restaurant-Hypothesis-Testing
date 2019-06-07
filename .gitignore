@@ -33,5 +33,8 @@ Temporary Items
 # Added afterwards by me
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+df_rat_complaints_complete.csv
+df_rat_complaints_twoyears.csv
+
 
 # End of https://www.gitignore.io/api/osx
