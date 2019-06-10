@@ -1,3 +1,17 @@
+# Files:
+The main work is done in the **Project 3 - Readme and Results.ipynb**, which calls functions in the following python files:
+- get_weather.py
+- day_of_week.py
+- rests_vs_violations.py
+- rodents.py
+
+The .py files reference the following .csv files, so live data is not necessary:
+- merge_2.csv
+- df_rat_complaints_by_zipcode.csv
+- violations_per_zip.csv
+
+There is an html map available [here](violations_per_insp_map.html) that can be downloaded locally and run. It is otherwise screenshotted in the repository.
+
 # The Data:
 
 Sources:
