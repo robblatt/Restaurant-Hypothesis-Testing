@@ -77,7 +77,7 @@ The mean score on days without precipitation is  15.48
 With a standard deviation of  11.66
 The t-stat is 1.414 and the the p value is 0.157.
 
-![Precipitation vs non-precipitation scores](precipitation-vs-non-precipiation-scores.png)
+![Precipitation vs non-precipitation scores](precipitation-vs-non-precipitation-scores.png)
 ![Precipitation vs non-precipitation t-test](precipitation-t-test.png)
 
 
