@@ -17,5 +17,9 @@ Sources:
     
 ## Hypothesis 1: The more locations of a restaurant, the lower the code violation score
 
+## Result of testing Hypothesis 1
+The p-value **with** Pret A Manger, which seems like an outlier, is 0.016. With it removed from the dataset, the p-value is 0.010. Both are below 0.05, which would allow us to reject the null hypothesis.
+
+![alt text](mean-inspection-score)
 
     
