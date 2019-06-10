@@ -53,6 +53,8 @@ The p-value **with** Pret A Manger, which seems like an outlier, is 0.016. With 
     Warnings:
     [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
+![violation map](violation_map.png)
+
 ## Hypothesis 3:  Bad weather leads to more infractions during a restaurant inspections in NYC
 
 The mean score on days with precipitation is  15.6
