@@ -39,7 +39,7 @@ The p-value **with** Pret A Manger, which seems like an outlier, is 0.016. With 
     
 ## Hypothesis 2: The more rodent complaints in a zipcode, the higher the rodent violations in an inspection in that zipcode
 
-![Violations per Inspection](violation_per_inspection.png)
+![Violations per Inspection](images/violation_per_inspection.png)
 
                                 OLS Regression Results                            
     ==============================================================================
@@ -67,7 +67,7 @@ The p-value **with** Pret A Manger, which seems like an outlier, is 0.016. With 
     Warnings:
     [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 
-![violation map](violation_map.png)
+![violation map](images/violation_map.png)
 
 ## Hypothesis 3:  Bad weather leads to more infractions during a restaurant inspections in NYC
 
