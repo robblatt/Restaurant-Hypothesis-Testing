@@ -34,8 +34,8 @@ Sources:
 ## Result of testing Hypothesis 1
 The p-value **with** Pret A Manger, which seems like an outlier, is 0.016. With it removed from the dataset, the p-value is 0.010. Both are below 0.05, which would allow us to reject the null hypothesis.
 
-![Mean Inspection Score](mean-inspection-score.png)
-![Mean Inspection Score without Pret A Manger](mean-inspection-score-no-pret.png)
+![Mean Inspection Score](images/mean-inspection-score.png)
+![Mean Inspection Score without Pret A Manger](images/mean-inspection-score-no-pret.png)
     
 ## Hypothesis 2: The more rodent complaints in a zipcode, the higher the rodent violations in an inspection in that zipcode
 
@@ -77,8 +77,8 @@ The mean score on days without precipitation is  15.48
 With a standard deviation of  11.66
 The t-stat is 1.414 and the the p value is 0.157.
 
-![Precipitation vs non-precipitation scores](precipitation-vs-non-precipitation-scores.png)
-![Precipitation vs non-precipitation t-test](precipitation-t-test.png)
+![Precipitation vs non-precipitation scores](images/precipitation-vs-non-precipitation-scores.png)
+![Precipitation vs non-precipitation t-test](images/precipitation-t-test.png)
 
 
 ### Result of testing Hypothesis 3
@@ -93,7 +93,7 @@ The mean inspection score for Thursday's and Friday's is  15.356
 With a standard deviation of  11.794
 The t-stat is 2.213 and the the p value is 0.0269.
 
-![T-Test for days of the week](day-of-week-t-test.png)
+![T-Test for days of the week](images/day-of-week-t-test.png)
 
 
 ### Result of testing hypothesis 4:
