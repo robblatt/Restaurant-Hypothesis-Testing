@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 def day_of_week():
     
-    df = pd.read_csv("merge_2.csv")
+    df = pd.read_csv("csv/merge_2.csv")
     df.drop('Unnamed: 0', axis=1, inplace = True)
 
     #create new data frame with score and day of the week
