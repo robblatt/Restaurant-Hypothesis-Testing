@@ -6,9 +6,13 @@ from scipy.stats import linregress
 
 def rests_vs_violations():
 
-        # --------------------------------------
-        # --------------------------------------
-        # --------------------------------------
+        # ------------------------------------------------------------------------------------
+        # the unique_inspection.csv file was created o get one row for each inspection using
+        # a restaurants "CAMIS" identifier and inspection date. It is not combined with other
+        # data. We create a new DataFrame which contains unique names and a count of those
+        # names (df_ex). We eventually get the restaurant name, inspection mean, and count
+        # of how many restaurants with that name are in the records.
+        # ------------------------------------------------------------------------------------
 
     def get_info():
         df = pd.read_csv('unique_inspection.csv')
@@ -29,9 +33,10 @@ def rests_vs_violations():
         df_score_count = pd.merge(df_count, df_score, how='left', on='restaurants')
         df_score_count['meany'] = df_score_count['SCORE'] / df_score_count['count']
 
-        # --------------------------------------
-        # --------------------------------------
-        # --------------------------------------
+        # ------------------------------------------------------------------------------------
+        # Creates a plot that compares the mean inspection scores based on the number of
+        # restaurants with that name that exists in the city.
+        # ------------------------------------------------------------------------------------
 
         area = np.pi*10
         y = df_score_count.meany
@@ -52,23 +57,24 @@ def rests_vs_violations():
         plt.legend(('NYC Mean Score', 'Restaurant Locations vs Score Trendline', 'Mean Score per Restaurant Locations'))
 
 
-        # --------------------------------------
-        # --------------------------------------
-        # --------------------------------------
+        # ------------------------------------------------------------------------------------
+        # Linear regression of what is charted above.
+        # ------------------------------------------------------------------------------------
 
         print('Linear Regression Restaurant Count vs Restaurant Score:')
         print(linregress(df_score_count['meany'], df_score_count['restaurants']))
 
-        # --------------------------------------
-        # --------------------------------------
-        # --------------------------------------
-
+        # ------------------------------------------------------------------------------------
+        # Pret A Manger's score is abnormally low across the board. It is possible that 
+        # because it is not a franchise, the rules are closely followed and as a result 
+        # it does not see a lot of unclean kitchens. The next few steps removes it from
+        # consideration.
+        # ------------------------------------------------------------------------------------
 
         minus_pret = df_score_count[df_score_count['meany'] > 7.4]
 
-
         # --------------------------------------
-        # --------------------------------------
+        # see above
         # --------------------------------------
 
         area = np.pi*10
