@@ -9,9 +9,12 @@ plt.style.use('seaborn')
     
 def rodents_per_violation():
     
-    # --------------------------------------
-    # --------------------------------------
-    # --------------------------------------
+    # ----------------------------------------------------------------------------
+    # the df_rat_complaints_by_zipcode.csv comes from the 311 dataset and only
+    # pulls the complaints that are directly rodent related. We combined that with
+    # the violations in restaurant inspections that were specifically about
+    # seeing rodents.
+    # ----------------------------------------------------------------------------
 
     complaints_by_zipcode = pd.read_csv('df_rat_complaints_by_zipcode.csv')
     complaints_by_zipcode.drop(['Unnamed: 0'], axis = 1, inplace = True)
@@ -24,9 +27,9 @@ def rodents_per_violation():
 
     df_rodents_ols.drop(['Unnamed: 0', 'inspections', 'violation_count', 'ZIPCODE'], axis=1, inplace = True)
 
-    # --------------------------------------
-    # --------------------------------------
-    # --------------------------------------
+    # ----------------------------------------------------------------------------
+    # Take a look at how they interact on a plot
+    # ----------------------------------------------------------------------------
 
     area = np.pi*10
     y = df_rodents_ols.vio_per_insp
@@ -51,9 +54,12 @@ def rodents_per_violation():
 
     plt.show()
 
-    # --------------------------------------
-    # --------------------------------------
-    # --------------------------------------
+    # ----------------------------------------------------------------------------
+    # Now to see if we can predict the amount of rodent related violations per
+    # inspection based on the number of 311 complaints received in that zipcode.
+    # With more time, we would have liked to predict the likelihood of an
+    # restaurants within a zipcode to have a rodent violation.
+    # ----------------------------------------------------------------------------
 
     formula = "vio_per_insp ~ complaints"
     model = ols(formula= formula, data=df_rodents_ols).fit()
