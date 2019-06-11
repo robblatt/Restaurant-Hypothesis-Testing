@@ -99,4 +99,7 @@ The t-stat is 2.213 and the the p value is 0.0269.
 ### Result of testing hypothesis 4:
 The critical value of 1.6449 is less than the t-statistic of 2.2132753769214997, with a p-value of 0.026882281413865797. Therefore we are able to reject the null hypothesis.
 
-## Takeways 
+## Takeways
+- We found hypothesis 1, 2 and 4 are statistically significant and were able to reject the null.
+- We failed to reject the null for hypothesis 3, finding that weather does not have a significant effect of inspection score 
+- One of the next steps we would like to take would be to build more upon hypothesis 2 and attempt to predict the likelihood of a rodent related infraction based upon the data.
