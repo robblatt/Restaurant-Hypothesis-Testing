@@ -16,11 +16,11 @@ def rodents_per_violation():
     # seeing rodents.
     # ----------------------------------------------------------------------------
 
-    complaints_by_zipcode = pd.read_csv('df_rat_complaints_by_zipcode.csv')
+    complaints_by_zipcode = pd.read_csv('csv/df_rat_complaints_by_zipcode.csv')
     complaints_by_zipcode.drop(['Unnamed: 0'], axis = 1, inplace = True)
     complaints_by_zipcode.rename(columns={"incident_zip":"ZIPCODE"}, inplace=True)
 
-    violations_per_zip = pd.read_csv('violations_per_zip.csv')
+    violations_per_zip = pd.read_csv('csv/violations_per_zip.csv')
     df_rodents = pd.merge(violations_per_zip, complaints_by_zipcode, on='ZIPCODE')
     df_rodents['vio_per_insp'] = df_rodents.violation_count / df_rodents.inspections
     df_rodents_ols = df_rodents
