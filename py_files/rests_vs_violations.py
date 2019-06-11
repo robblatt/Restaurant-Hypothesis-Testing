@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import linregress
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
 
 
 def rests_vs_violations():
@@ -100,5 +102,17 @@ def rests_vs_violations():
         print('Linear Regression Restaurant Count vs Restaurant Score without Pret A Manger:')
 
         print(linregress(minus_pret['restaurants'], minus_pret['meany']))
+        
+        minus_pret_ols = minus_pret[['restaurants', 'meany']]
+        
+        formula = "meany ~ restaurants"
+        
+        model = ols(formula= formula, data=minus_pret_ols).fit()
+        outcome = 'meany'
+        predictors = minus_pret_ols.drop('meany', axis=1)
+        pred_sum = "+".join(predictors.columns)
+        formula = outcome + "~" + pred_sum
+        model = ols(formula= formula, data=minus_pret_ols).fit()
+        print(model.summary())
 
     get_info()
