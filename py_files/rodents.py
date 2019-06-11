@@ -16,7 +16,7 @@ def rodents_per_violation():
     # seeing rodents.
     # ----------------------------------------------------------------------------
 
-    complaints_by_zipcode = pd.read_csv('csv/df_rat_complaints_by_zipcode.csv')
+    complaints_by_zipcode = pd.read_csv('https://raw.githubusercontent.com/robblatt/Project-3-Mod/master/csv/df_rat_complaints_by_zipcode.csv')
     complaints_by_zipcode.drop(['Unnamed: 0'], axis = 1, inplace = True)
     complaints_by_zipcode.rename(columns={"incident_zip":"ZIPCODE"}, inplace=True)
 
