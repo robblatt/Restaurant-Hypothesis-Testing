@@ -15,7 +15,7 @@ def rests_vs_violations():
         # ------------------------------------------------------------------------------------
 
     def get_info():
-        df = pd.read_csv('unique_inspection.csv')
+        df = pd.read_csv('csv/unique_inspection.csv')
         df_names = pd.DataFrame(
             {'DBA': df['DBA'],
              'CAMIS': df['CAMIS'],
