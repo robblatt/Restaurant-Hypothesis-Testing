@@ -36,6 +36,33 @@ The p-value **with** Pret A Manger, which seems like an outlier, is 0.016. With 
 
 ![Mean Inspection Score](images/mean-inspection-score.png)
 ![Mean Inspection Score without Pret A Manger](images/mean-inspection-score-no-pret.png)
+
+                                OLS Regression Results                            
+    ==============================================================================
+    Dep. Variable:                  meany   R-squared:                       0.146
+    Model:                            OLS   Adj. R-squared:                  0.126
+    Method:                 Least Squares   F-statistic:                     7.191
+    Date:                Tue, 11 Jun 2019   Prob (F-statistic):             0.0104
+    Time:                        11:57:03   Log-Likelihood:                -89.732
+    No. Observations:                  44   AIC:                             183.5
+    Df Residuals:                      42   BIC:                             187.0
+    Df Model:                           1                                         
+    Covariance Type:            nonrobust                                         
+    ===============================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+    -------------------------------------------------------------------------------
+    Intercept      13.0267      0.339     38.413      0.000      12.342      13.711
+    restaurants    -0.0091      0.003     -2.682      0.010      -0.016      -0.002
+    ==============================================================================
+    Omnibus:                        6.513   Durbin-Watson:                   1.752
+    Prob(Omnibus):                  0.039   Jarque-Bera (JB):                2.222
+    Skew:                           0.044   Prob(JB):                        0.329
+    Kurtosis:                       1.902   Cond. No.                         118.
+    ==============================================================================
+
+    Warnings:
+    [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
     
 ## Hypothesis 2: The more rodent complaints in a zipcode, the higher the rodent violations in an inspection in that zipcode
 
