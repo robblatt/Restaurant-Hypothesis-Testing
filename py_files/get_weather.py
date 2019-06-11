@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 
 def get_weather():
-    df = pd.read_csv("merge_2.csv")
+    df = pd.read_csv("csv/merge_2.csv")
     df.drop('Unnamed: 0', axis=1, inplace = True)
 
     #create a new dataframe with score and weather_binary, 1 = precipitation, 0 = no precipitation
