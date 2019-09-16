@@ -1,16 +1,10 @@
-# Files:
-The main work is done in the **Project 3 - Readme and Results.ipynb**, which calls functions in the following python files:
-- get_weather.py
-- day_of_week.py
-- rests_vs_violations.py
-- rodents.py
+# The Challenge:
 
-The .py files reference the following .csv files, so live data is not necessary:
-- merge_2.csv
-- df_rat_complaints_by_zipcode.csv
-- violations_per_zip.csv
-
-There is an html map available [here](violations_per_insp_map.html) that can be downloaded locally and run. It is otherwise screenshotted in the repository.
+This repository and readme address the module 3 project at the Flatiron School. The prompt was to use a dataset and test four hypothesises. We selected the NYC Restaurant Inspection Results dataset, choosing to test the following hypothesis:
+- The more locations of a restaurant, the lower the code violation score
+- The more rodent complaints in a zipcode, the higher the rodent violations in an inspection in that zipcode
+- Bad weather leads to more infractions during a restaurant inspections in NYC
+- NYC restaurants are more likely to get to be cited for a greater number of infractions at the beginning of the week
 
 # The Data:
 
@@ -112,7 +106,7 @@ The t-stat is 1.414 and the the p value is 0.157.
 
 The critical value of 1.6449 is larger than the t-statistic of 1.414, with a p-value of 0.157. Therefore we fail to reject the null hypothesis.
 
-## Hypothesis 4: NYC resaurants are more likely to get to be cited for a greater number of infractions at the beginning of the week
+## Hypothesis 4: NYC restaurants are more likely to get to be cited for a greater number of infractions at the beginning of the week
 
 The mean inspection score for Monday's and Tuesday's is  15.564
 With a standard deviation of  11.671
@@ -126,7 +120,21 @@ The t-stat is 2.213 and the the p value is 0.0269.
 ### Result of testing hypothesis 4:
 The critical value of 1.6449 is less than the t-statistic of 2.2132753769214997, with a p-value of 0.026882281413865797. Therefore we are able to reject the null hypothesis.
 
-## Takeways
+# Takeways
 - We found hypothesis 1, 2 and 4 are statistically significant and were able to reject the null.
 - We failed to reject the null for hypothesis 3, finding that weather does not have a significant effect of inspection score 
 - One of the next steps we would like to take would be to build more upon hypothesis 2 and attempt to predict the likelihood of a rodent related infraction based upon the data.
+
+# Files:
+The main work is done in the **Project 3 - Readme and Results.ipynb**, which calls functions in the following python files:
+- get_weather.py
+- day_of_week.py
+- rests_vs_violations.py
+- rodents.py
+
+The .py files reference the following .csv files, so live data is not necessary:
+- merge_2.csv
+- df_rat_complaints_by_zipcode.csv
+- violations_per_zip.csv
+
+There is an html map available [here](violations_per_insp_map.html) that can be downloaded locally and run. It is otherwise screenshotted in the repository.
